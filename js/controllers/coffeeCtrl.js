@@ -57,7 +57,6 @@
         return ((($scope.bedTime / 3600000)+1) - (($scope.lastCoffeeTime / 3600000)+1)).mod(24);
       }
       $http.get('data/result.json').success(function(data) {
-        $scope.results = data;
         $scope.getResult = function(){
           var stillAwakeTime =  getStillAwakeTime();
           var match = false, i = 0, size = data.length;
